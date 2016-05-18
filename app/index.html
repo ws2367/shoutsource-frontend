@@ -79,14 +79,14 @@
             <div class="swiper-container">
               <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <h3>Magna feugiat lorem</h3>
+                    <h3>Project #1 - Testing 1</h3>
                     <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
                     <a href="#our-services"><div class="button button-ghost">Visit Website</div></a>
                     <span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
                   </div>
                   <div class="swiper-slide">
-                    <h3>Magna feugiat lorem</h3>
-                    <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+                    <h3>Project #2 - What is this 2</h3>
+                    <p>Lorem Afasdh slhes reggi dkhgr hieoiw hkdi er mi thlidk skjhf poie lkhtoi elkjr oie opr dd sed volutpat et nascetur.</p>
                     <a href="#our-services"><div class="button button-ghost">Visit Website</div></a>
                     <span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
                   </div>
@@ -94,8 +94,8 @@
               <!-- Add Pagination -->
               <div class="swiper-pagination"></div>
               <!-- Add Arrows -->
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next swiper-button-white"><i class="material-icons">keyboard_arrow_right</i></div>
+              <div class="swiper-button-prev swiper-button-white"><i class="material-icons">keyboard_arrow_left</i></div>
             </div>
           </div>
         </div>
@@ -108,12 +108,21 @@
           <div class="col-lg-3 col-xs-12">
             <p class="title">Work With Us</p>
           </div>
-          <div class="col-lg-9 col-xs-12">
-            <h1>Hi, I'm <strong>Photon</strong>, another fine<br />
-            little freebie from <a href="http://html5up.net">HTML5 UP</a>.</h1>
+          <div class="col-lg-9 col-xs-12 contents">
             <p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna<br />
             lobortis feugiat sapien sed etiam volutpat accumsan.</p>
-            <a href="#header"><div class="button">Learn More</div></a>
+            <!-- Simple Textfield -->
+            <div class="form-group">
+            <div class="col-lg-4 col-xs-12 first">
+              <input type="text" required="required"/>
+              <label for="input" class="control-label">Your Name</label><i class="bar"></i>
+            </div>
+            <div class="col-lg-8 col-xs-12">
+              <input type="text" required="required"/>
+              <label for="input" class="control-label">Your Email Address</label><i class="bar"></i>
+            </div>
+            <a href="#header"><div class="button button-ghost">Send</div></a>
+            </div>
           </div>
         </div>
       </div>
@@ -161,7 +170,7 @@
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 90,
-        loop: true
+        // effect: 'fade'
     });
     </script>
 
