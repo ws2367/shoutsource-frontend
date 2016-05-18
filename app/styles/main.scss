@@ -15,6 +15,7 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 body {
   /*padding-top: 20px;
   padding-bottom: 20px;*/
+  font-family: "Helvetica Neue";
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -45,6 +46,11 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+.container {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -70,7 +76,7 @@ body {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1210px;
+    max-width: 1024px;
   }
 
   /* Remove the padding we set earlier */
@@ -92,7 +98,15 @@ body {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
 /* Custom CSS */
+
+// 1. Sections
 
 section {
   background-color: #fafafa;
@@ -102,11 +116,174 @@ section {
 
 section#header {
   height: 656px;
+  background-color: #0D3745;
+  color: #fff;
+  padding: 13em 3em 13em 3em;
+
+  & h1 {
+    font-size: 40pt;
+  }
+
+  & p {
+    font-weight: 100;
+    font-size: 12pt;
+    letter-spacing: .06em;
+    color: #fafafa;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  & .inner {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
 }
+
+section#featured-works {
+  background-color: #fff;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 1199px) {
+  section#header{
+    padding: 5em 1em 5em 1em;
+  }
+  .contents {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  section#header{
+    padding: 2em 0em 5em 0em;
+  }
+  section {
+    padding-top: 50px !important;
+  }
+}
+
+// 2. Title
+
+.title {
+  font-size: 16pt;
+  font-weight: 600;
+}
+
+.title:after {
+  content: '';
+  position: absolute;
+  margin-top: 5px;
+  height: 6px;
+  width: 100px;
+  display: block;
+  background-color: #215D6D;
+}
+
+.contents {
+  & p {
+    padding-top: 5px;
+    font-size: 14pt;
+    line-height: 1.5;
+    color: #454545;
+  }
+
+  & h3 {
+    margin-top: 4px;
+  }
+}
+
+
+// 3. Footer
 
 footer {
   padding: 50px 0;
   text-align: center;
+  color: #aaa;
+  font-weight: 200;
+  overflow: visible;
+  letter-spacing: .03em;
+
+  & span {
+    margin: 0 10px;
+  }
+}
+
+// 4. Components
+#scrolltop {
+  display: inline-block;
+  position: absolute;
+  background-color: #215D6D;
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  right: 100px;
+  margin-top: -20px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+
+  & i {
+    font-size: 36px;
+    padding: 17px;
+  }
+}
+
+#scrolltop:hover{
+  background-color: #fff;
+  color: #215D6D;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+
+.button {
+  display: inline-block;
+  border-radius: 2px;
+  width: auto;
+  padding: 10px 60px;
+  background-color: #215D6D;
+  margin-top: 30px;
+  font-family: "Montserrat";
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #215D6D;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.button-ghost {
+  display: inline-block;
+  border-radius: 2px;
+  width: auto;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  font-family: "Montserrat";
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #215D6D;
+  border: 3px #215D6D solid;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.button-ghost:hover {
+  background-color: #215D6D;
+  color: #fff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .image {
