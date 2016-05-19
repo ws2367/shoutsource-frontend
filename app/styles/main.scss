@@ -104,14 +104,28 @@ body {
   }
 }
 
+span a, span a:active, span a:focus{
+  font-weight: 600;
+  color: #215D6D;
+  text-decoration: none;
+  -webkit-transition: all 0.18s ease;
+  transition: all 0.18s ease;
+}
+
+span a:hover{
+  color: #0D3745;
+  text-decoration: none;
+  -webkit-transition: all 0.18s ease;
+  transition: all 0.18s ease;
+}
+
 /* Custom CSS */
 
 // 1. Sections
 
 section {
   background-color: #fafafa;
-  padding-top: 100px;
-  min-height: 656px;
+  padding: 100px 0;
 }
 
 section#header {
@@ -144,7 +158,6 @@ section#header {
 
 section#featured-works {
   background-color: #fff;
-  margin-bottom: 100px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -154,6 +167,16 @@ section#featured-works {
   .contents {
     margin-top: 30px;
   }
+  #scrolltop {
+    right: 50px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #scrolltop {
+    opacity: 0;
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -161,7 +184,13 @@ section#featured-works {
     padding: 2em 0em 5em 0em;
   }
   section {
-    padding-top: 50px !important;
+    padding: 50px 0 !important;
+  }
+  .swiper-button-white,
+  .swiper-button-disabled,
+  #scrolltop {
+    opacity: 0 !important;
+    display: none;
   }
 }
 
@@ -196,6 +225,10 @@ section#featured-works {
 
   & h3 {
     margin-top: 4px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-size: 14pt;
+    font-weight: bold;
   }
 }
 
@@ -292,6 +325,44 @@ footer {
 
 // Form
 
+.no-padding {
+  padding-left: 0 !important;
+}
+
+.info {
+  margin-top: 30px;
+  font-size: 12pt !important;
+  color: #454545 !important;
+
+  & i {
+    font-size: 24px;
+    color: #757575;
+    padding: 20px 10px;
+    -webkit-transition: color .18s ease-in-out;
+    transition: color .18s ease-in-out;
+  }
+
+  .fa-facebook {
+    padding-left: 0 !important;
+  }
+
+  a:hover .fa-facebook {
+    color: #39579a;
+    -webkit-transition: color .18s ease-in-out;
+    transition: color .18s ease-in-out;
+  }
+  a:hover .fa-twitter {
+    color: #55acee;
+    -webkit-transition: color .18s ease-in-out;
+    transition: color .18s ease-in-out;
+  }
+  a:hover .fa-linkedin {
+    color: #0076b7;
+    -webkit-transition: color .18s ease-in-out;
+    transition: color .18s ease-in-out;
+  }
+}
+
 .form-group .col-xs-12 {
   position: relative;
   margin-top: 40px;
@@ -326,7 +397,7 @@ footer {
   z-index: 1;
   color: #b3b3b3;
   font-size: 12pt;
-  font-weight: 200;
+  font-weight: normal;
   -webkit-transition: all 0.28s ease;
   transition: all 0.28s ease;
 }
