@@ -4,7 +4,7 @@ console.log('\'Allo \'Allo!');
 $(document).ready(function(){
 	$('body').css('opacity', 1);
 
-	$(".button, .scroll").click(function(e) {
+	$(".scroll").click(function(e) {
 		e.preventDefault();
 		var link = $(this).parent().attr('href');
 	    $('html, body').animate({
@@ -27,4 +27,10 @@ $(window).resize(function(){
 	$(".swiper-button-white").css({
 		"bottom":h+"px",
 	});
+});
+
+$(function () {
+    $('#contact').submit(function () {
+        console.log("!");
+    });
 });

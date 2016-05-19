@@ -138,6 +138,10 @@ section {
 section#header {
   height: 656px;
   background-color: #0D3745;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   color: #fff;
   padding: 13em 3em 13em 3em;
 
@@ -176,6 +180,10 @@ section#featured-works {
   }
   #scrolltop {
     right: 50px !important;
+  }
+  .no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -225,9 +233,10 @@ section#featured-works {
 .contents {
   & p {
     padding-top: 5px;
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 1.5;
     color: #454545;
+    font-weight: normal;
   }
 
   & h3 {
@@ -243,16 +252,31 @@ section#featured-works {
 // 3. Footer
 
 footer {
-  padding: 50px 0;
+  padding: 40px 0;
   text-align: center;
   color: #aaa;
-  font-weight: 200;
+  font-weight: normal;
   overflow: visible;
   letter-spacing: .03em;
+  margin-top: 72px;
 
   & span {
     margin: 0 10px;
   }
+}
+
+#logo-bottom {
+  background-image: url("../images/logo-bottom.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin-top: -60px !important;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 // 4. Components
@@ -330,10 +354,15 @@ footer {
   transition: all .2s ease-in-out;
 }
 
+.button-ghost:hover .input {
+  color: #fff !important;
+}
+
 // Form
 
 .no-padding {
   padding-left: 0 !important;
+  padding-right: 90px;
 }
 
 .info {
@@ -388,7 +417,7 @@ footer {
 
 .form-group select {
   width: 100%;
-  font-size: 14pt;
+  font-size: 13pt;
   height: 1.6rem;
   padding: 0.125rem 0.125rem 0.0625rem;
   background: none;
@@ -431,7 +460,7 @@ footer {
   display: block;
   background: none;
   padding: 0.125rem 0.125rem 0.0625rem;
-  font-size: 12pt;
+  font-size: 13pt;
   border-width: 0;
   border-color: transparent;
   line-height: 3;
@@ -485,6 +514,24 @@ footer {
   width: 100%;
   left: 0;
 }
+
+#submit {
+  padding: 0px;
+}
+
+#submit input {
+  margin-top: -2px;
+  height: 32pt;
+  color: #215D6D;
+  text-transform: uppercase;
+  font-size: 10.5pt;
+  width: 150.14px;
+}
+
+#submit:hover input[type=submit]{
+  color: #fff!important;
+}
+
 
 // Swiper 
 
