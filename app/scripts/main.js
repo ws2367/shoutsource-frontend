@@ -8,6 +8,7 @@ $(document).ready(function(){
 	    $('html, body').animate({
 	        scrollTop: $(link).offset().top
 	    }, 1000, 'easeInOutQuart');
+	    return false;
 	});
 
 	var h = 60 + $('.image').height()/2-35;
