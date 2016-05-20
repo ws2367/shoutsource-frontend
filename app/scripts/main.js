@@ -31,9 +31,11 @@ $(window).scroll( function(){
 	hideme();
 });
 
+
+/* Functions */ 
 function hideme(){
 	$('.hideme').each( function(i){
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight()/3;
+        var bottom_of_object = $(this).offset().top + 150;
         var bottom_of_window = $(window).scrollTop() + $(window).height();
         var $this = $(this);
 
@@ -48,7 +50,7 @@ function hideme(){
 }
 
 function swiperbuttonPosition(){
-	var h = 60 + $('.image').height()/2-35;
+	var h = 60 + $('.swiper-slide .image').height()/2-35;
 	console.log(h);
 	$(".swiper-button-white").css({
 		"bottom":h+"px",

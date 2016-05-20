@@ -80,48 +80,21 @@ h3 {
   }
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 1024px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .container {
-    max-width: 750px;
-  }
+a {
+  text-decoration: none !important;
 }
 
 span a, span a:active, span a:focus{
   font-weight: 600;
   color: #215D6D;
-  text-decoration: none;
+  text-decoration: none !important;
   -webkit-transition: all 0.18s ease;
   transition: all 0.18s ease;
 }
 
 span a:hover{
   color: #0D3745;
-  text-decoration: none;
+  text-decoration: none !important;
   -webkit-transition: all 0.18s ease;
   transition: all 0.18s ease;
 }
@@ -140,8 +113,12 @@ section {
   padding: 100px 0;
 }
 
+section#our-services {
+  padding-bottom: 0px;
+}
+
 section#header {
-  height: 656px;
+  min-height: 656px;
   background-color: #0D3745;
   background-image: url("../images/background.png");
   background-size: cover;
@@ -174,44 +151,6 @@ section#header {
 
 section#featured-works {
   background-color: #fff;
-}
-
-@media screen and (max-width: 1199px) {
-  section#header{
-    padding: 5em 1em 5em 1em;
-  }
-  .contents {
-    margin-top: 30px;
-  }
-  #scrolltop {
-    right: 50px !important;
-  }
-  .no-padding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #scrolltop {
-    opacity: 0;
-    display: none;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  section#header{
-    padding: 2em 0em 5em 0em;
-  }
-  section {
-    padding: 50px 0 !important;
-  }
-  .swiper-button-white,
-  .swiper-button-disabled,
-  #scrolltop {
-    opacity: 0 !important;
-    display: none;
-  }
 }
 
 .swiper-slide {
@@ -292,38 +231,38 @@ footer {
   margin: auto;
 }
 
-// 4. Components
-#scrolltop {
-  display: inline-block;
-  position: absolute;
-  background-color: #215D6D;
-  width: 70px;
-  height: 70px;
-  color: #fff;
-  right: 100px;
-  margin-top: -20px;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+// // 4. Components
+// #scrolltop {
+//   display: inline-block;
+//   position: absolute;
+//   background-color: #215D6D;
+//   width: 70px;
+//   height: 70px;
+//   color: #fff;
+//   right: 100px;
+//   margin-top: -20px;
+//   -webkit-transition: all .2s ease-in-out;
+//   transition: all .2s ease-in-out;
 
-  & i {
-    font-size: 36px;
-    padding: 17px;
-  }
-}
+//   & i {
+//     font-size: 36px;
+//     padding: 17px;
+//   }
+// }
 
-#scrolltop:hover{
-  background-color: #fff;
-  color: #215D6D;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
+// #scrolltop:hover{
+//   background-color: #fff;
+//   color: #215D6D;
+//   -webkit-transition: all .2s ease-in-out;
+//   transition: all .2s ease-in-out;
+// }
 
 
 .button {
   display: inline-block;
   border-radius: 2px;
   width: auto;
-  padding: 10px 60px;
+  padding: 10px 20px;
   background-color: #215D6D;
   margin-top: 30px;
   font-family: "Montserrat";
@@ -331,13 +270,18 @@ footer {
   text-transform: uppercase;
   cursor: pointer;
   color: #fff;
+  border: 2px #215D6D solid;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
 }
 
 .button:hover {
   background-color: #fff;
   color: #215D6D;
+  border: 2px #fff solid;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -358,13 +302,33 @@ footer {
   border: 3px #215D6D solid;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+
+  &.dark {
+    background-color: rgba(255,255,255,0);
+    color: #fff;
+    border: 2px #fff solid;
+  }
+}
+
+#cta-button {
+  // position: absolute;
+  // top: 20px;
+  // right: 40px;
+  margin-left: 10px;
 }
 
 .button-ghost:hover {
   background-color: #215D6D;
   color: #fff;
+  border: 3px #215D6D solid;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+
+  &.dark {
+    background-color: #fff;
+    border: 2px #fff solid;
+    color: #215D6D;
+  }
 }
 
 .button-ghost:hover .input {
@@ -580,7 +544,7 @@ footer {
     border: 0;
     display: inline-block;
     position: relative;
-    margin: 30px 0 60px 0;
+    margin: 0px 0 60px 0;
 
     img {
       border-radius: _size(border-radius);
@@ -618,3 +582,87 @@ footer {
       }
     }
   }
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 1024px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+
+  #our-services .image {
+    margin-bottom: 0px;
+  }
+  #our-services .row {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #our-services .image {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  section#our-services {
+    padding-bottom: 10px !important;
+  }
+  .no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 750px;
+  }
+  section#header{
+    padding: 5em 1em 5em 1em;
+  }
+  .contents {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    padding: 50px 0!important;
+  }
+
+  section#header{
+    padding: 2em 0em 8em 0em;
+
+    & .button {
+      display: block;
+      width: 158px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    a:hover .button {
+      text-decoration: none !important;
+    }
+  }
+  .swiper-button-white,
+  .swiper-button-disabled {
+    opacity: 0 !important;
+    display: none;
+  }
+}
