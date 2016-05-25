@@ -17,8 +17,8 @@ body {
   padding-bottom: 20px;*/
   font-family: "Helvetica Neue";
   opacity: 0;
-  -webkit-transition: opacity 0.28s ease;
-  transition: opacity 0.28s ease;
+  -webkit-transition: opacity 0.78s ease;
+  transition: opacity 0.78s ease;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -102,6 +102,8 @@ span a:hover{
 .hideme {
     opacity:0;
     margin-top: 30px;
+    -webkit-transition: all 500ms, cubic-bezier(.33,0,.2,1);
+    transition: all 500ms, cubic-bezier(.33,0,.2,1);
 }
 
 /* Custom CSS */
@@ -271,8 +273,8 @@ footer {
   cursor: pointer;
   color: #fff;
   border: 2px #215D6D solid;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -282,8 +284,8 @@ footer {
   background-color: #fff;
   color: #215D6D;
   border: 2px #fff solid;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 }
 
 .button-ghost {
@@ -300,8 +302,8 @@ footer {
   cursor: pointer;
   color: #215D6D;
   border: 3px #215D6D solid;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 
   &.dark {
     background-color: rgba(255,255,255,0);
@@ -321,8 +323,8 @@ footer {
   background-color: #215D6D;
   color: #fff;
   border: 3px #215D6D solid;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
 
   &.dark {
     background-color: #fff;
@@ -376,7 +378,7 @@ footer {
   }
 }
 
-.form-group .col-xs-12 {
+#contact .col-xs-12 {
   position: relative;
   margin-top: 40px;
   margin-bottom: 2.25rem;
@@ -388,11 +390,11 @@ footer {
   }
 }
 
-.form-group input {
+#contact input {
   height: 1.9rem;
 }
 
-.form-group select {
+#contact select {
   width: 100%;
   font-size: 13pt;
   height: 1.6rem;
@@ -402,7 +404,7 @@ footer {
   line-height: 1.6;
   box-shadow: none;
 }
-.form-group .control-label {
+#contact .control-label {
   position: absolute;
   top: -4px;
   pointer-events: none;
@@ -414,13 +416,13 @@ footer {
   -webkit-transition: all 0.28s ease;
   transition: all 0.28s ease;
 }
-.form-group .bar {
+#contact .bar {
   position: relative;
   border-bottom: 2px solid #999;
   display: block;
   margin-top: 10px;
 }
-.form-group .bar::before {
+#contact .bar::before {
   content: '';
   height: 2px;
   width: 0;
@@ -432,8 +434,8 @@ footer {
   transition: left 0.28s ease, width 0.28s ease;
   z-index: 2;
 }
-.form-group input,
-.form-group textarea {
+#contact input,
+#contact textarea {
   display: block;
   background: none;
   padding: 0.125rem 0.125rem 0.0625rem;
@@ -450,44 +452,44 @@ footer {
   height: 22px;
 }
 
-.form-group select,
-.form-group input:focus,
-.form-group input:valid,
-.form-group input.form-file,
-.form-group input.has-value,
-.form-group textarea:focus,
-.form-group textarea:valid,
-.form-group textarea.form-file,
-.form-group textarea.has-value {
+#contact select,
+#contact input:focus,
+#contact input:valid,
+#contact input.form-file,
+#contact input.has-value,
+#contact textarea:focus,
+#contact textarea:valid,
+#contact textarea.form-file,
+#contact textarea.has-value {
   color: #454545;
 }
-.form-group select ~ .control-label,
-.form-group input:focus ~ .control-label,
-.form-group input:valid ~ .control-label,
-.form-group input.form-file ~ .control-label,
-.form-group input.has-value ~ .control-label,
-.form-group textarea:focus ~ .control-label,
-.form-group textarea:valid ~ .control-label,
-.form-group textarea.form-file ~ .control-label,
-.form-group textarea.has-value ~ .control-label {
+#contact select ~ .control-label,
+#contact input:focus ~ .control-label,
+#contact input:valid ~ .control-label,
+#contact input.form-file ~ .control-label,
+#contact input.has-value ~ .control-label,
+#contact textarea:focus ~ .control-label,
+#contact textarea:valid ~ .control-label,
+#contact textarea.form-file ~ .control-label,
+#contact textarea.has-value ~ .control-label {
   font-size: 10pt;
   color: gray;
   top: -24px;
   left: 0;
 }
-.form-group select:focus,
-.form-group input:focus,
-.form-group textarea:focus {
+#contact select:focus,
+#contact input:focus,
+#contact textarea:focus {
   outline: none;
 }
-.form-group select:focus ~ .control-label,
-.form-group input:focus ~ .control-label,
-.form-group textarea:focus ~ .control-label {
+#contact select:focus ~ .control-label,
+#contact input:focus ~ .control-label,
+#contact textarea:focus ~ .control-label {
   color: #215D6D;
 }
-.form-group select:focus ~ .bar::before,
-.form-group input:focus ~ .bar::before,
-.form-group textarea:focus ~ .bar::before {
+#contact select:focus ~ .bar::before,
+#contact input:focus ~ .bar::before,
+#contact textarea:focus ~ .bar::before {
   width: 100%;
   left: 0;
 }
@@ -536,6 +538,26 @@ footer {
     font-size: 36px;
     padding: 17px;
     color: #fff;
+  }
+}
+
+.message {
+  display: none;
+  padding: 10px 15px 15px 15px;
+  background-color: rgba(33,93,109,.2);
+  /*display: block;*/
+  opacity: 0;
+  color: #215D6D;
+  border-radius: 2px;
+  -webkit-transition: opacity 0.28s ease;
+  transition: opacity 0.28s ease;
+  max-width: 100%;
+
+  & i {
+    top: 5px;
+    position: relative;
+    margin-right: 5px;
+    font-size: 20px;
   }
 }
 

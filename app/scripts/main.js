@@ -18,6 +18,18 @@ $(document).ready(function(){
 	swiperbuttonPosition()
 	//Hide Me
 	hideme();
+
+	$("#contact").on('submit', function(e){
+		e.preventDefault();
+		console.log("!!!");
+
+		$('.message').slideDown();
+		setTimeout(function(){
+			$('.message').css('opacity',1);
+		},120);
+
+		return false;
+	})
 })
 
 /* Every time the window is resized ... */
@@ -41,7 +53,7 @@ function hideme(){
 
         /* If the object is completely visible in the window, fade it it */
         if( bottom_of_window > bottom_of_object ){
-            $this.animate({'opacity':'1', 'margin-top':'0px'},500);
+            $this.css({'opacity':'1', 'margin-top':'0px'});
             setTimeout(function(){
             	$this.find('.title').addClass('scrolled');
             },100);
