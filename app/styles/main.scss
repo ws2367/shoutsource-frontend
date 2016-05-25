@@ -378,7 +378,7 @@ footer {
   }
 }
 
-#contact .col-xs-12 {
+#mc-embedded-subscribe-form .mc-field-group {
   position: relative;
   margin-top: 40px;
   margin-bottom: 2.25rem;
@@ -390,11 +390,11 @@ footer {
   }
 }
 
-#contact input {
+#mc-embedded-subscribe-form input {
   height: 1.9rem;
 }
 
-#contact select {
+#mc-embedded-subscribe-form select {
   width: 100%;
   font-size: 13pt;
   height: 1.6rem;
@@ -404,7 +404,7 @@ footer {
   line-height: 1.6;
   box-shadow: none;
 }
-#contact .control-label {
+#mc-embedded-subscribe-form .control-label {
   position: absolute;
   top: -4px;
   pointer-events: none;
@@ -416,13 +416,14 @@ footer {
   -webkit-transition: all 0.28s ease;
   transition: all 0.28s ease;
 }
-#contact .bar {
+
+#mc-embedded-subscribe-form .bar {
   position: relative;
   border-bottom: 2px solid #999;
   display: block;
   margin-top: 10px;
 }
-#contact .bar::before {
+#mc-embedded-subscribe-form .bar::before {
   content: '';
   height: 2px;
   width: 0;
@@ -434,8 +435,7 @@ footer {
   transition: left 0.28s ease, width 0.28s ease;
   z-index: 2;
 }
-#contact input,
-#contact textarea {
+#mc-embedded-subscribe-form input {
   display: block;
   background: none;
   padding: 0.125rem 0.125rem 0.0625rem;
@@ -452,44 +452,64 @@ footer {
   height: 22px;
 }
 
-#contact select,
-#contact input:focus,
-#contact input:valid,
-#contact input.form-file,
-#contact input.has-value,
-#contact textarea:focus,
-#contact textarea:valid,
-#contact textarea.form-file,
-#contact textarea.has-value {
+.mce_inline_error {
+  background-color: rgba(0,0,0,0) !important;
+  color: #215D6D !important;
+  font-weight: normal !important;
+}
+
+#mc-embedded-subscribe-form select,
+#mc-embedded-subscribe-form input:focus,
+#mc-embedded-subscribe-form input:valid,
+#mc-embedded-subscribe-form input.form-file,
+#mc-embedded-subscribe-form input.has-value {
   color: #454545;
 }
-#contact select ~ .control-label,
-#contact input:focus ~ .control-label,
-#contact input:valid ~ .control-label,
-#contact input.form-file ~ .control-label,
-#contact input.has-value ~ .control-label,
-#contact textarea:focus ~ .control-label,
-#contact textarea:valid ~ .control-label,
-#contact textarea.form-file ~ .control-label,
-#contact textarea.has-value ~ .control-label {
+#mc-embedded-subscribe-form select ~ .control-label,
+#mc-embedded-subscribe-form input:focus ~ .control-label,
+#mc-embedded-subscribe-form input:valid ~ .control-label,
+#mc-embedded-subscribe-form input:invalid ~ .control-label,
+#mc-embedded-subscribe-form input.form-file ~ .control-label,
+#mc-embedded-subscribe-form input.has-value ~ .control-label {
   font-size: 10pt;
   color: gray;
   top: -24px;
   left: 0;
 }
-#contact select:focus,
-#contact input:focus,
-#contact textarea:focus {
+
+#mc-embedded-subscribe-form input[value=""] ~ .control-label {
+  position: absolute;
+  top: -4px;
+  pointer-events: none;
+  padding-left: 0.125rem;
+  z-index: 1;
+  color: #b3b3b3;
+  font-size: 12pt;
+  font-weight: normal;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+}
+
+#mc-embedded-subscribe-form input:focus ~ .control-label {
+  font-size: 10pt;
+  color: gray;
+  top: -24px;
+  left: 0;
+}
+
+#mc-embedded-subscribe-form select:focus,
+#mc-embedded-subscribe-form input:focus,
+#mc-embedded-subscribe-form textarea:focus {
   outline: none;
 }
-#contact select:focus ~ .control-label,
-#contact input:focus ~ .control-label,
-#contact textarea:focus ~ .control-label {
+#mc-embedded-subscribe-form select:focus ~ .control-label,
+#mc-embedded-subscribe-form input:focus ~ .control-label,
+#mc-embedded-subscribe-form textarea:focus ~ .control-label {
   color: #215D6D;
 }
-#contact select:focus ~ .bar::before,
-#contact input:focus ~ .bar::before,
-#contact textarea:focus ~ .bar::before {
+#mc-embedded-subscribe-form select:focus ~ .bar::before,
+#mc-embedded-subscribe-form input:focus ~ .bar::before,
+#mc-embedded-subscribe-form textarea:focus ~ .bar::before {
   width: 100%;
   left: 0;
 }
@@ -542,11 +562,11 @@ footer {
 }
 
 .message {
-  display: none;
+  // display: none;
   padding: 10px 15px 15px 15px;
   background-color: rgba(33,93,109,.2);
   /*display: block;*/
-  opacity: 0;
+  // opacity: 0;
   color: #215D6D;
   border-radius: 2px;
   -webkit-transition: opacity 0.28s ease;
@@ -650,6 +670,10 @@ footer {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  section {
+    padding: 50px 0!important;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -665,9 +689,6 @@ footer {
 }
 
 @media screen and (max-width: 500px) {
-  section {
-    padding: 50px 0!important;
-  }
 
   section#header{
     padding: 2em 0em 8em 0em;

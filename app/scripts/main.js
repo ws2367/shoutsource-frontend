@@ -3,6 +3,10 @@ console.log('\'Allo \'Allo!');
 
 $(document).ready(function(){
 	$('body').css('opacity', 1);
+	$('input').change(function(){
+		$(this).attr('value', $(this).val());
+		console.log("???");
+	});
 
 	//Scroll to #
 	$(".scroll").click(function(e) {
@@ -19,16 +23,16 @@ $(document).ready(function(){
 	//Hide Me
 	hideme();
 
-	$("#contact").on('submit', function(e){
-		e.preventDefault();
-		console.log("!!!");
+	$("form").on('submit', function(e){
+		// e.preventDefault();
+		$('#mce-success-response').text("Thanks!");
 
-		$('.message').slideDown();
-		setTimeout(function(){
-			$('.message').css('opacity',1);
-		},120);
+		// $('.message').slideDown();
+		// setTimeout(function(){
+		// 	$('.message').css('opacity',1);
+		// },120);
 
-		return false;
+		// return false;
 	})
 })
 
