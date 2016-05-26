@@ -3,6 +3,11 @@ console.log('\'Allo \'Allo!');
 
 $(document).ready(function(){
 	$('body').css('opacity', 1);
+	$('input[type=email]').attr('value', "");
+	$('input[type=email]').val("");
+	$('input[type=text]').attr('value', "");
+	$('input[type=text]').val("");
+
 	$('input').change(function(){
 		$(this).attr('value', $(this).val());
 		console.log("???");
@@ -25,7 +30,6 @@ $(document).ready(function(){
 
 	$("form").on('submit', function(e){
 		// e.preventDefault();
-		$('#mce-success-response').text("Thanks!");
 
 		// $('.message').slideDown();
 		// setTimeout(function(){
