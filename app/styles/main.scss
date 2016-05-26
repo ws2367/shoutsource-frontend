@@ -80,8 +80,11 @@ h3 {
   }
 }
 
-a {
+a,
+a:active,
+a:focus {
   text-decoration: none !important;
+  outline: 0 !important;
 }
 
 span a, span a:active, span a:focus{
