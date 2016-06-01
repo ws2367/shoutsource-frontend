@@ -28,16 +28,12 @@ $(document).ready(function(){
 	//Hide Me
 	hideme();
 
-	$("form").on('submit', function(e){
-		// e.preventDefault();
-
-		// $('.message').slideDown();
-		// setTimeout(function(){
-		// 	$('.message').css('opacity',1);
-		// },120);
-
-		// return false;
-	})
+	$('.image a').click(function(){
+		$('body').css('overflow-y', 'hidden');
+	});
+	$('#lightbox').click(function(){
+		$('body').css('overflow-y', 'scroll');
+	});
 })
 
 /* Every time the window is resized ... */
