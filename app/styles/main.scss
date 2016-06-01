@@ -190,7 +190,7 @@ section#featured-works {
 .contents {
   & p {
     padding-top: 5px;
-    font-size: 12pt;
+    font-size: 13pt;
     line-height: 1.5;
     color: #454545;
     font-weight: normal;
@@ -670,7 +670,7 @@ ul.scope {
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 1024px;
+    max-width: 1200px;
   }
 
   /* Remove the padding we set earlier */
