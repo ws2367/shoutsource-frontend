@@ -75,4 +75,10 @@ function swiperbuttonPosition(){
 	$(".swiper-button-white").css({
 		"bottom":h+"px",
 	});
+
+	$('.swiper-slide, .swiper-button-white').hover(function(){
+		$('.swiper-button-white').css('opacity', 1);
+	}, function(){
+		$('.swiper-button-white').css('opacity', 0);
+	})
 }

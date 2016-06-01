@@ -537,6 +537,40 @@ footer {
 
 // Swiper 
 
+
+ul.scope {
+  margin: 20px 0 40px 0;
+  padding: 0;
+  //line-height: 3em;
+
+  & span {
+    font-weight: bold;
+    font-size: 12pt;
+  }
+
+  & li {
+    display: inline-block;
+    /*background-color: #215D6D;*/
+    color: #215D6D;
+    padding: 6px 12px;
+    
+    border-radius: 4px;
+    font-size: 10pt;
+    border: #215D6D 2px solid;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    margin: 5px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; 
+    white-space: nowrap;
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}
+
 .swiper-pagination-bullet-active {
   background: #215D6D !important;
 }
@@ -550,6 +584,7 @@ footer {
   top: inherit !important;
   -webkit-transition: all 0.28s ease;
   transition: all 0.28s ease;
+  opacity: 0;
 
   &.swiper-button-next {
     right: 0px;
@@ -561,6 +596,9 @@ footer {
     font-size: 36px;
     padding: 17px;
     color: #fff;
+  }
+  &.swiper-button-disabled {
+    opacity: 0 !important;
   }
 }
 

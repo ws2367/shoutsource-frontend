@@ -12,6 +12,7 @@
 
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/lightbox2/dist/css/lightbox.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -41,7 +42,7 @@
               <img src="images/logo.png" height="150" width="150" alt="" />
             </div>
             <div class="col-lg-9 col-xs-12">
-              <h1><strong>A Digital Product<br />Builder</strong></h1>
+              <h1><strong>A Digital Product<br />Agency</strong></h1>
               <p>We design, build and grow digital products. <br />
                  We specialize in <strong>websites</strong> and <strong>mobile applications</strong>.</p>
               <a href="#our-services"><div class="button scroll">Learn more</div></a>
@@ -71,6 +72,7 @@
             </div>
             <div class="row">
               <div class="col-sm-6 col-xs-12" style="float: right">
+              <h3>Pick our brains!</h3>
               <p>
                 Having trouble vetting individual freelancers and deciding on one? We help you ease the decision making process by offering free consultation, technical Q&A and informative calls.
               </p>
@@ -81,7 +83,6 @@
             </div>
             <div class="row">
               <div class="col-sm-6 col-xs-12">
-              <h3>We specialize in websites and mobile applications.</h3>
               <p>
                 We truly value our partnerships with the clients by fully grasping their needs and goals. Feeling the pain in managing outsourced projects? We alleviate it by offering bug-tracking tools, task management tools, and email reminders.
               </p>
@@ -105,16 +106,39 @@
             <div class="swiper-container">
               <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <h3>Project #1 - XXX</h3>
-                    <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-                    <a href="#our-services"><div class="button button-ghost">Visit Website</div></a><br /><br />
-                    <span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
+                    <h3>Yours</h3>
+                    <p>Yours is a social app that allows you to post anonymously about your friends. <br/><br/></p>
+                    <ul class="scope">
+                      <span>Scope:</span>
+                      <li> Design </li>
+                      <li> iOS </li>
+                      <li> Backend Server </li>
+                    </ul>
+                    <!-- <a href="#our-services"><div class="button button-ghost">Visit Website</div></a><br /><br /> -->
+                    <span class="image fit"><a href="images/yours.jpg" data-lightbox="image-1" data-title="Yours"><img src="images/yours.jpg" alt="" /></a></span>
                   </div>
                   <div class="swiper-slide">
-                    <h3>Project #2 - What is this 2</h3>
-                    <p>Lorem Afasdh slhes reggi dkhgr hieoiw hkdi er mi thlidk skjhf poie lkhtoi elkjr oie opr dd sed volutpat et nascetur.</p>
-                    <a href="#our-services"><div class="button button-ghost">Visit Website</div></a><br /><br />
-                    <span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
+                    <h3>Embark</h3>
+                    <p>Embark is about location-based event publishing and sharing. The client has provided the design assets and we coded it up!</p>
+                    <ul class="scope">
+                      <span>Scope:</span>
+                      <li> iOS </li>
+                      <li> Backend Server </li>
+                    </ul>
+                    <!-- <a href="#our-services"><div class="button button-ghost">Visit Website</div></a><br /><br /> -->
+                    <span class="image fit"><a href="images/embark.jpg" data-lightbox="image-2" data-title="Embark"><img src="images/embark.jpg" alt="" /></a></span>
+                  </div>
+                  <div class="swiper-slide">
+                    <h3>Sycomore</h3>
+                    <p>From concept to product. We helped the client to define product and flesh out the wireframe based on the idea. </p>
+                    <ul class="scope">
+                      <span>Scope:</span>
+                      <li> Product Definition </li>
+                      <li> Wireframing </li>
+                      <li> Design </li>
+                    </ul>
+                    <!-- <a href="#our-services"><div class="button button-ghost">Visit Website</div></a><br /><br /> -->
+                    <span class="image fit"><a href="images/sycomore.jpg" data-lightbox="image-3" data-title="Sycomore"><img src="images/sycomore.jpg" alt="" /></a></span>
                   </div>
               </div>
               <!-- Add Pagination -->
@@ -135,8 +159,7 @@
             <p class="title">Work With Us</p>
           </div>
           <div class="col-lg-9 col-xs-12 contents">
-            <p>Accumsan feugiat mi commodo erat lorem ipsum, sed magna
-            lobortis feugiat sapien sed etiam volutpat accumsan.</p>
+            <p>Drop us a line and we’ll get back to you soon!</p>
             <div class="col-sm-8 col-xs-12 no-padding">
               <!-- Simple Textfield -->
               <div id="mc_embed_signup">
@@ -201,6 +224,7 @@
     <!-- bower:js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/lightbox2/dist/js/lightbox.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -237,6 +261,11 @@
         spaceBetween: 90,
         // effect: 'fade'
     });
+    lightbox.option({
+      'fadeDuration': 200,
+      'resizeDuration': 200,
+      'fitImagesInViewport':true
+    })
     </script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
