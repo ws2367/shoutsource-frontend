@@ -666,6 +666,13 @@ ul.scope {
     }
   }
 
+.resizing-1 h3 {
+  margin-top: 80px;
+}
+
+.resizing-2 p {
+  margin-top: 90px;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -715,6 +722,14 @@ ul.scope {
   section {
     padding: 50px 0!important;
   }
+
+  .resizing-1 h3 {
+    margin-top: 0px;
+  }
+
+  .resizing-2 p {
+    margin-top: 0px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -726,6 +741,13 @@ ul.scope {
   }
   .contents {
     margin-top: 30px;
+  }
+  .resizing-1 h3 {
+    margin-top: 50px;
+  }
+
+  .resizing-2 p {
+    margin-top: 60px;
   }
 }
 
