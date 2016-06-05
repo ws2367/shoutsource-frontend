@@ -24,7 +24,7 @@ $(document).ready(function(){
 	});
 
 	//Set Swiper-button position
-	swiperbuttonPosition()
+	swiperbuttonPosition();
 	//Hide Me
 	hideme();
 
@@ -76,5 +76,5 @@ function swiperbuttonPosition(){
 		$('.swiper-button-white').css('opacity', 1);
 	}, function(){
 		$('.swiper-button-white').css('opacity', 0);
-	})
+	});
 }
